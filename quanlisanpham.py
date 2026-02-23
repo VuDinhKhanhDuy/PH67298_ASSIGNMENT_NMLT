@@ -10,3 +10,14 @@ def load_data():
 def save_data(products):
     with open('products.json', 'w', encoding='utf-8') as f:
         json.dump(products, f, indent=4, ensure_ascii=False)
+def add_product(products):
+    new_id = f"LT{len(products) + 1:02d}"
+    try:
+        products.append({
+            "ID": new_id, "Tên": input("Tên SP: "), "Thương hiệu": input("Thương hiệu: "),
+            "Giá": int(input("Giá: ")), "Số lượng": int(input("Số lượng: "))
+        })
+        print(f"Đã thêm {new_id}!")
+    except ValueError:
+        print("Lỗi: Giá và Số lượng phải là số nguyên!")
+    return products        
