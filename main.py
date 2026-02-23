@@ -1,4 +1,6 @@
+# Import toàn bộ module quản lý sản phẩm
 import quanlisanpham as pm
+
 def main():
     # Tải dữ liệu ngay khi chương trình bắt đầu
     danh_sach_sp = pm.load_data()
