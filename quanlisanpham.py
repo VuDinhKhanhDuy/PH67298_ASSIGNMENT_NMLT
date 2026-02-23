@@ -20,4 +20,9 @@ def add_product(products):
         print(f"Đã thêm {new_id}!")
     except ValueError:
         print("Lỗi: Giá và Số lượng phải là số nguyên!")
-    return products        
+def display_all_products(products):
+    if not products:
+        print("Kho hàng trống.")
+        return
+    for p in products:
+        print(f"{p['ID']} | {p['Tên']} | {p['Thương hiệu']} | Giá: {p['Giá']} | SL: {p['Số lượng']}")        
