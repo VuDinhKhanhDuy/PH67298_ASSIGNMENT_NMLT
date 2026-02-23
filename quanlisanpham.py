@@ -25,4 +25,11 @@ def display_all_products(products):
         print("Kho hàng trống.")
         return
     for p in products:
-        print(f"{p['ID']} | {p['Tên']} | {p['Thương hiệu']} | Giá: {p['Giá']} | SL: {p['Số lượng']}")        
+    pid = input("Nhập ID cần sửa: ").strip().upper()
+    for p in products:
+        if p["ID"] == pid:
+            p["Tên"] = input(f"Tên mới ({p['Tên']}): ") or p["Tên"]
+            print("Cập nhật thành công!")
+            return
+    
+
