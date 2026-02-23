@@ -1,4 +1,4 @@
-# Import toàn bộ module quản lý sản phẩm
+
 import quanlisanpham as pm
 
 def main():
