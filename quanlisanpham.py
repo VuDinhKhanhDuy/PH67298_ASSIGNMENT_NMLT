@@ -31,5 +31,13 @@ def display_all_products(products):
             p["Tên"] = input(f"Tên mới ({p['Tên']}): ") or p["Tên"]
             print("Cập nhật thành công!")
             return
+def delete_product(products):
+    pid = input("Nhập ID cần xóa: ").strip().upper()
+    for i, p in enumerate(products):
+        if p["ID"] == pid:
+            del products[i]
+            print("Đã xóa!")
+            return
+    print("Không tìm thấy!")        
     
 
