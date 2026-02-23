@@ -6,7 +6,7 @@ def load_data():
     try:
         with open('products.json', 'r', encoding='utf-8') as f:
             return json.load(f)
-    except FileNotFoundError: # Bắt lỗi khi lần đầu chạy ứng dụng chưa có file
+    except FileNotFoundError: 
         return []
 
 # 2. Lưu dữ liệu
@@ -18,7 +18,7 @@ def save_data(products):
 # 3. Thêm sản phẩm
 def add_product(products):
     """Thêm sản phẩm và tự động tạo ID."""
-    new_id = f"LT{len(products) + 1:02d}" # Tự động tạo mã ID
+    new_id = f"LT{len(products) + 1:02d}" 
     try:
         products.append({
             "ID": new_id,
@@ -30,7 +30,7 @@ def add_product(products):
         print(f"--> Đã thêm sản phẩm thành công với mã {new_id}!")
     except ValueError:
         print("--> LỖI: Giá và Số lượng bắt buộc phải là số nguyên!")
-    return products # Trả về danh sách đã được cập nhật
+    return products
 
 # 4. Cập nhật sản phẩm
 def update_product(products):
