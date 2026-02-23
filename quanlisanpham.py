@@ -86,3 +86,4 @@ def display_all_products(products):
         print(f"{p['ID']:<6} | {p['Tên']:<25} | {p['Thương hiệu']:<12} | {p['Giá']:<12} | {p['Số lượng']:<5}")
     print("-" * 70)
     
+dadsadsad
