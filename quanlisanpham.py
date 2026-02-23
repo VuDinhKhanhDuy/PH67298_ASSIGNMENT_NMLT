@@ -38,6 +38,9 @@ def delete_product(products):
             del products[i]
             print("Đã xóa!")
             return
-    print("Không tìm thấy!")        
+    
+def search_product_by_name(products):
+    kw = input("Nhập từ khóa: ").lower()
+    # Tạm thời chưa viết logic            
     
 
